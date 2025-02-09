@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+// int genRandomNumber(int num){
+//     return num * 78667 + 56467 - num * 67;
+// }
+
+int genRandomNumberInRange(int min, int max)
+{
+    srand(time(0));
+    return min + (rand() % max);
+}
+
+int main()
+{
+
+    char ch;
+    while (ch != 'q')
+    {
+        printf("%d\n", genRandomNumberInRange(1, 6));
+        scanf("%c", &ch);
+    }
+
+return 0;
+}
